@@ -1,0 +1,18 @@
+{{^if pagination.prev}}
+  {{^if pagination.next}}
+  {{else}}
+    <nav role="pagination">
+      <ul class="pager">
+        <li class="prev {{^if prev}}disabled{{/if}}">
+          <a class="newer-posts" href="{{page_url prev}}">&larr;</a>
+        </li>
+        <li>
+          <a class="current-page">{{page}} of {{pages}}</span>
+        </li>
+        <li class="next {{^if next}}disabled{{/if}}">
+          <a class="older-posts" href="{{page_url next}}">&rarr;</a>
+        </li>
+      </ul>
+    </nav>
+  {{/if}}
+{{/if}}

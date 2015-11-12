@@ -1,0 +1,20 @@
+{{!< default}}
+
+{{#foreach posts}}
+<div class="row">
+  <div class="col-xs-12">
+    <section class="m-b-lg {{post_class}}">
+      <h1 class="display-2 headline">
+        <a href="{{url}}" title="{{title}}">{{{title}}}</a>
+      </h1>
+      <div class="byline small text-muted">
+        <time class="published" pubdate datetime="{{date format="X"}}">{{date timeago="true"}}</time>
+        {{tags prefix=" &mdash; " autolink="false"}}
+      </div>
+    </section>
+  </div>
+</div>
+{{/foreach}}
+
+
+{{pagination}}

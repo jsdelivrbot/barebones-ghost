@@ -1,0 +1,20 @@
+{
+  "name": "barebones-ghost",
+  "version": "0.1.0",
+  "description": "A barebones ghost theme using Bootstrap 4",
+  "hoomepage": "https://creeperengine.ghost.io",
+  "keywords": [ "minimalist", "barebones", "minimal", "bootstrap", "Adobe fonts" ],
+  "license": "BSD-2-Clause",
+  "author": {
+    "name": "Clint Fralick",
+    "email": "cfralick@creeperengine.com"
+  },
+  "config": {
+    "screen": "assets/css/screen.css"
+  },
+  "scripts": {
+    "css:minify": "curl -LSso ${npm_package_config_screen/%.*/.min.css} cssminifier.com/raw --data-urlencode \"input@${npm_package_config_screen}\"",
+    "zip": "zip -r ../${npm_package_name}.zip . --include=\"*hbs\" --include=\"*assets/*/*min*\"",
+    "build": "npm run css:minify; npm run zip"
+  }
+}
