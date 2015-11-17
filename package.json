@@ -18,7 +18,7 @@
     "url": "https://github.com/cfralick/barebones-ghost"
   },
   "config": {
-    "css": "assets/css/screen.css",
+    "css": "assets/css/barebones.css",
     "js": "assets/js/barebones.js"
   },
   "scripts": {
