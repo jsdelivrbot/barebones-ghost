@@ -2,19 +2,31 @@
   "name": "barebones-ghost",
   "version": "0.1.0",
   "description": "A barebones ghost theme using Bootstrap 4",
-  "hoomepage": "https://creeperengine.ghost.io",
+  "homepage": "https://cfralick.github.io/barebones-ghost",
   "keywords": [ "minimalist", "barebones", "minimal", "bootstrap", "Adobe fonts" ],
   "license": "BSD-2-Clause",
   "author": {
     "name": "Clint Fralick",
-    "email": "cfralick@creeperengine.com"
+    "email": "cfralick@creeperengine.com",
+    "url": "https://cfralick.github.io"
+  },
+  "bugs": {
+    "url": "https://github.com/cfralick/barebones-ghost/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/cfralick/barebones-ghost"
   },
   "config": {
-    "screen": "assets/css/screen.css"
+    "css": "assets/css/screen.css",
+    "js": "assets/js/barebones.js"
   },
   "scripts": {
-    "css:minify": "curl -LSso ${npm_package_config_screen/%.*/.min.css} cssminifier.com/raw --data-urlencode \"input@${npm_package_config_screen}\"",
-    "zip": "zip -r ../${npm_package_name}.zip . --include=\"*hbs\" --include=\"*assets/*/*min*\"",
-    "build": "npm run css:minify; npm run zip"
+    "clean": "rm assets/{css,js}/*.min.{css,js}",
+    "minify:css": "curl -LSso ${npm_package_config_css/%.*/.min.css} cssminifier.com/raw --data-urlencode \"input@${npm_package_config_css}\"",
+    "minify:js": "curl -LSs -X POST javascript-minifier.com/raw --data-urlencode \"input@${npm_package_config_js}\" -o ${npm_package_config_js/%.*/.min.js}",
+    "minify": "npm run minify:css && npm run minify:js",
+    "zip": "zip -r ../${npm_package_name}.zip . --include=\"*.hbs\" --include=\"*.min.css\" --include=\"*.min.js\"",
+    "build": "npm run minify; npm run zip"
   }
 }
