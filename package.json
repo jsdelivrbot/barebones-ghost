@@ -23,9 +23,9 @@
   },
   "scripts": {
     "clean": "rm assets/{css,js}/*.min.{css,js}",
-    "minify:css": "curl -LSso ${npm_package_config_css/%.*/.min.css} cssminifier.com/raw --data-urlencode \"input@${npm_package_config_css}\"",
-    "minify:js": "curl -LSs -X POST javascript-minifier.com/raw --data-urlencode \"input@${npm_package_config_js}\" -o ${npm_package_config_js/%.*/.min.js}",
-    "minify": "npm run minify:css && npm run minify:js",
+    "minify:css": "curl --connect-timeout 10 -L cssminifier.com/raw --data-urlencode \"input@${npm_package_config_css}\" -o ${npm_package_config_css/%.*/.min.css}",
+    "minify:js": "curl --connect-timeout 10 -L -X POST javascript-minifier.com/raw --data-urlencode \"input@${npm_package_config_js}\" -o ${npm_package_config_js/%.*/.min.js}",
+    "minify": "npm run minify:css; npm run minify:js",
     "zip": "zip -r ../${npm_package_name}.zip . --include=\"*.hbs\" --include=\"*.min.css\" --include=\"*.min.js\"",
     "build": "npm run minify; npm run zip"
   }
