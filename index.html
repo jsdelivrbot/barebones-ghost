@@ -31,7 +31,17 @@
         <h2>
 <a id="barebones-ghost-theme" class="anchor" href="#barebones-ghost-theme" aria-hidden="true"><span class="octicon octicon-link"></span></a>Barebones Ghost Theme</h2>
 
-<p>Minimalist theme using Bootstrap 4. </p>
+<p>A minimalist theme using Bootstrap 4 with Disqus comments, social sharing, and Google Analytics.  </p>
+
+<h5>
+<a id="configuration" class="anchor" href="#configuration" aria-hidden="true"><span class="octicon octicon-link"></span></a>Configuration</h5>
+
+<p>Define your Google Analytics tracking id and Disqus shortname in the Code Injection section of Ghost's admin:  </p>
+
+<div class="highlight highlight-source-js"><pre>    <span class="pl-k">&lt;</span>script<span class="pl-k">&gt;</span>
+        <span class="pl-k">var</span> gaUid <span class="pl-k">=</span> <span class="pl-c1">YOUR</span><span class="pl-k">-</span><span class="pl-c1">ID</span>;
+        <span class="pl-k">var</span> disqus_shortname <span class="pl-k">=</span> <span class="pl-c1">YOUR_SHORTNAME</span>;
+    <span class="pl-k">&lt;</span><span class="pl-k">/</span>script<span class="pl-k">&gt;</span></pre></div>
       </section>
       <footer>
         <p>This project is maintained by <a href="https://github.com/cfralick">cfralick</a></p>
