@@ -8,70 +8,48 @@
     <meta name="HandheldFriendly" content="True" />
 
     <title>{{meta_title}}</title>
+    
 
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css"/>
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha/css/bootstrap.min.css"/>
     <link rel="stylesheet" href="{{asset "css/screen.min.css"}}"/>    
     {{ghost_head}}
+    <script>
+        (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+          new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+          j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+          '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-5MGXM4');
+    </script>
   </head>
-  
+
   <body class="{{body_class}}">
+    <!-- Google Tag Manager -->
+    <noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-5MGXM4"
+        height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager -->
+    
     <header role="banner" class="navbar navbar-full navbar-light navbar-fixed-top">
       <div class="container">{{navigation}}</div>
     </header>
-    
+
     <main role="main" class="container">
-      {{{body}}}
+    {{{body}}}
     </main>
 
     <footer role="contentinfo" class="navbar text-muted hidden-sm-down">
-        <time>&copy; {{date format="YYYY"}}</time>
-        <a href="{{@blog.url}}">{{@blog.title}}</a>
+      <time>&copy; {{date format="YYYY"}}</time>
+      <a href="{{@blog.url}}">{{@blog.title}}</a>
     </footer>
     {{ghost_foot}}
-    <script src="//cdnjs.cloudflare.com/ajax/libs/tether/0.7.2/tether.min.js"></script>
-    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha/js/bootstrap.min.js"></script>
-    <script>
-      
-      (function($) {
-        $('pre').addClass('prettyprint');
-        $('blockquote').addClass('blockquote');
-        
-        var $topNavbar = $('header.navbar-fixed-top');
-
-        $(window).scroll({scrollStart: 0}, function(event) {
-          var scrollNow = $(window).scrollTop();
-          if(scrollNow < this.scrollStart) {
-            $topNavbar.slideDown();
-          } else {
-            $topNavbar.slideUp();
-          }
-          this.scrollStart = scrollNow;
-        });
-      })(jQuery);
-    
-      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-      ga('create', gaUid, 'auto');
-      ga('send', 'pageview');
-      
+    <script async src="//cdnjs.cloudflare.com/ajax/libs/tether/0.7.2/tether.min.js"></script>
+    <script async src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha/js/bootstrap.min.js"></script>
+    <script async>
       var disqus_config = function () {
         this.page.url = location.href;
-    	this.page.identifier = location.pathname;
+        this.page.identifier = location.pathname;
       };
-      (function(disqus_config, shortname) {
-        if(!document.getElementById('disqus_thread')) return;
-        
-        var d = document, s = d.createElement('script');
-        s.src = '//'+shortname+'.disqus.com/embed.js';
-        s.async = true;
-        s.setAttribute('data-timestamp', +new Date());
-        
-        (d.head || d.body).appendChild(s);
-      })(disqus_config, disqus_shortname);
     </script>
+    <script async src="{{asset "js/barebones.min.js"}}"></script>
   </body>
 </html>
