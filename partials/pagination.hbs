@@ -2,12 +2,12 @@
   <div class="col-xs-12">
     <nav role="pagination">
       <ul class="pager">
-        {{#if pagination.prev}}
+        {{#if prev}}
         <li class="prev {{^if prev}}disabled{{/if}}">
           <a class="newer-posts" href="{{page_url prev}}">&larr;</a>
         </li>
         {{/if}}
-        {{#if pagination.next}}
+        {{#if next}}
         <li class="next {{^if next}}disabled{{/if}}">
           <a class="older-posts" href="{{page_url next}}">&rarr;</a>
         </li>
