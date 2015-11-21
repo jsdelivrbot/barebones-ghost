@@ -3,6 +3,10 @@
     
     var $nav = $('header.navbar-fixed-top');
     
+    var disqus_config = function () {
+        this.page.url = location.href;
+        this.page.identifier = location.pathname;
+    };
 
     var getScript = function(sn) {
         var s = d.createElement('script');
@@ -14,7 +18,7 @@
     
     $(w).scroll({st: 0}, function(event) {
         var sn = $(w).scrollTop();
-        (sn < this.st) ? $nav.slideDown() : $nav.slideUp();
+        var x = (sn < this.st) ? $nav.slideDown() : $nav.slideUp();
         this.st = sn;
     });
     

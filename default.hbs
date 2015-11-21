@@ -8,7 +8,6 @@
     <meta name="HandheldFriendly" content="True" />
 
     <title>{{meta_title}}</title>
-    
 
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha/css/bootstrap.min.css"/>
     <link rel="stylesheet" href="{{asset "css/barebones.min.css"}}"/>    
@@ -37,18 +36,11 @@
     </main>
 
     <footer role="contentinfo" class="navbar navbar-light navbar-full hidden-sm-down">
-      <time>&copy; {{date format="YYYY"}}</time>
-      <a href="{{@blog.url}}">{{@blog.title}}</a>
+      <time class="text-muted" datetime="{{date format="X"}}">&copy; {{date format="YYYY"}} {{@blog.title}}</time>
     </footer>
     {{ghost_foot}}
     <script async src="//cdnjs.cloudflare.com/ajax/libs/tether/0.7.2/tether.min.js"></script>
     <script async src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha/js/bootstrap.min.js"></script>
-    <script async>
-      var disqus_config = function () {
-        this.page.url = location.href;
-        this.page.identifier = location.pathname;
-      };
-    </script>
     <script async src="{{asset "js/barebones.min.js"}}"></script>
   </body>
 </html>
