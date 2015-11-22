@@ -1,18 +1,14 @@
-<div class="row">
-  <div class="col-xs-12">
-    <nav role="pagination">
-      <ul class="pager">
-        {{#if prev}}
-        <li class="prev {{^if prev}}disabled{{/if}}">
-          <a class="newer-posts" href="{{page_url prev}}">&larr;</a>
-        </li>
-        {{/if}}
-        {{#if next}}
-        <li class="next {{^if next}}disabled{{/if}}">
-          <a class="older-posts" href="{{page_url next}}">&rarr;</a>
-        </li>
-        {{/if}}
-      </ul>
-    </nav>
-  </div>
-</div>
+<nav role="pagination">
+  <ul class="nav navbar-nav pager">
+    <li class="nav-item page-prev prev {{^if prev}}disabled{{/if}}">
+      <a {{^if prev}}disabled{{/if}} class="newer-posts nav-link" href="{{page_url prev}}">
+        <i class="fa fa-fw fa-arrow-left"></i>
+      </a>
+    </li>
+    <li class="next page-next nav-item {{^if next}}disabled{{/if}}">
+      <a class="older-posts nav-link" href="{{page_url next}}">
+        <i class="fa fa-fw fa-arrow-right"></i>
+      </a>
+    </li>
+  </ul>
+</nav>

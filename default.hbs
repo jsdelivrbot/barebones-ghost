@@ -24,7 +24,14 @@
     </main>
 
     <footer role="contentinfo" class="navbar navbar-light navbar-full hidden-sm-down">
-      <time class="text-muted" datetime="{{date format="X"}}">&copy; {{date format="YYYY"}} {{@blog.title}}</time>
+      <div class="container">
+        {{#is "post"}}
+        <time class="text-muted" datetime="{{date format="X"}}">&copy; {{date format="YYYY"}}</time>
+        <a href="{{@blog.url}}" class="text-muted">{{@blog.title}}</a>
+        {{else}}
+          {{pagination}}
+        {{/is}}
+      </div>
     </footer>
     {{ghost_foot}}
     <script async src="//cdnjs.cloudflare.com/ajax/libs/tether/0.7.2/tether.min.js"></script>
