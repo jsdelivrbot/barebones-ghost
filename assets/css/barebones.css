@@ -25,7 +25,7 @@ body {
 
 main {
   min-height: 100%;
-  padding-top: 3.5rem;
+  padding-top: 4rem;
   margin-bottom: -2rem;
 }
 
@@ -93,6 +93,15 @@ a:active {
   max-width: 30rem;
 }
 
+main.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+main.container > .row {
+  flex: 1 1 auto;
+}
+
 .navbar {
   font-size: initial;
   padding: .5em 1em;
@@ -148,6 +157,14 @@ a:active {
   height: auto;
 }
 
+.container .row .post {
+  margin-bottom: 1.5rem;
+}
+
+.container .row:last-child .post {
+  margin-bottom: 0;
+}
+
 blockquote {
   color: #818a91;
   font-size: .85rem;
@@ -179,6 +196,13 @@ address, .author {
   display: inline-block;
 }
 
+.pager {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.pager > li.nav-item > a.nav-link {
+  padding: 0 9px;
+}
 #at4-share > a.at4-share-btn {
   background-color: rgba(0,0,0,.3);
 }
