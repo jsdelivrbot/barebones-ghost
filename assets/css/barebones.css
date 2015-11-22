@@ -47,19 +47,23 @@ body > footer {
 }
 
 @media(min-width: 10em) {
-  html { font-size: 110%; }
+  html { font-size: 106.7%; }
+}
+
+@media(min-width: 22em) {
+  html { font-size: 113.8%; }
 }
 
 @media(min-width: 34em) {
-  html { font-size: 121%; }
+  html { font-size: 129.6%; }
 }
 
 @media(min-width: 48em) {
-  html { font-size: 123.5%; }
+  html { font-size: 138.3%; }
 }
 
 @media(min-width: 62em) {
-  html { font-size: 146%; }
+  html { font-size: 147.6%; }
 }
 
 h1 { font-size: 1.296em; }
