@@ -1,11 +1,11 @@
 <nav role="pagination">
-  <ul class="nav navbar-nav pager">
-    <li class="nav-item page-prev prev {{^if prev}}disabled{{/if}}">
+  <ul class="nav pager">
+    <li class="nav-item pager-prev prev {{^if prev}}disabled{{/if}}">
       <a {{^if prev}}disabled{{/if}} class="newer-posts nav-link" href="{{page_url prev}}">
         <i class="fa fa-fw fa-arrow-left"></i>
       </a>
     </li>
-    <li class="next page-next nav-item {{^if next}}disabled{{/if}}">
+    <li class="next pager-next nav-item {{^if next}}disabled{{/if}}">
       <a class="older-posts nav-link" href="{{page_url next}}">
         <i class="fa fa-fw fa-arrow-right"></i>
       </a>

@@ -26,9 +26,9 @@
     <footer role="contentinfo" class="navbar navbar-light navbar-full hidden-sm-down">
       <div class="container">
         {{#is "post"}}
-        <time class="text-muted" datetime="{{date format="X"}}">&copy; {{date format="YYYY"}}</time>
-        <a href="{{@blog.url}}" class="text-muted">{{@blog.title}}</a>
-        {{else}}
+          {{> adjacent}}
+        {{/is}}
+        {{#is "home,index"}}
           {{pagination}}
         {{/is}}
       </div>

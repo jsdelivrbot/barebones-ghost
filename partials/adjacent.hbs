@@ -1,0 +1,20 @@
+{{#post}}
+<nav role="pagination">
+  <ul class="nav navbar-nav pager">
+    {{#prev_post}}
+    <li class="nav-item pager-prev prev">
+      <a class="newer-posts nav-link" href="{{url}}">
+        <i class="fa fa-fw fa-arrow-left"></i>
+      </a>
+    </li>
+    {{/prev_post}}
+    {{#next_post}}
+    <li class="next pager-next nav-item">
+      <a class="older-posts nav-link" href="{{url}}">
+        <i class="fa fa-fw fa-arrow-right"></i>
+      </a>
+    </li>
+    {{/next_post}}
+  </ul>
+</nav>
+{{/post}}
