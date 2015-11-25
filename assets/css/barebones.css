@@ -98,6 +98,7 @@ main.container {
   flex-direction: column;
   justify-content: space-around;
 }
+
 main.container > .row {
   flex: 1 1 auto;
 }
@@ -123,7 +124,7 @@ main.container > .row {
   padding-right: 0;
 }
 
-@media(min-width: 34em) {
+@media(min-width: 48em) {
   .navbar .container {
     padding-left: .9375rem;
     padding-right: .9375rem;
@@ -162,14 +163,15 @@ main.container > .row {
 }
 
 .container .row:last-child .post {
-  margin-bottom: 0;
+  margin-bottom: .5rem;
 }
 
 blockquote {
   color: #818a91;
-  font-size: .85rem;
+  font-size: .85em;
 }
 
+blockquote,
 .blockquote, 
 .form-control {
   font-family: "Source Sans Pro";
@@ -203,6 +205,7 @@ address, .author {
 .pager > li.nav-item > a.nav-link {
   padding: 0 9px;
 }
+
 #at4-share > a.at4-share-btn {
   background-color: rgba(0,0,0,.3);
 }

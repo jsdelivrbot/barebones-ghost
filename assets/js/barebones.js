@@ -16,11 +16,10 @@
     };
   
     $(w).one('scroll', function(event) {
-      $('body').has(DISQUS_ID)
+      $(DISQUS_ID)
         .append($('<script/>', disqusOptions))
-        .find(DISQUS_ID)
         .delay(500)
-        .fadeTo("slow", 1);
+        .fadeTo(null, 1);
     });
   })($, disqus_shortname, d, w);
 
