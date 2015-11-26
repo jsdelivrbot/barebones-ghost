@@ -18,14 +18,14 @@
     $(w).one('scroll', function(event) {
       $(DISQUS_ID)
         .append($('<script/>', disqusOptions))
-        .delay(500)
+        .delay(800)
         .fadeTo(null, 1);
     });
   })($, disqus_shortname, d, w);
 
  
   (function($, d, w) {
-    var $nav = $('header.later.navbar-fixed-top');
+    var $nav = $('header.navbar-fixed-top');
   
     $(w).scroll({st: 0}, function(event) {
       var sn = $(w).scrollTop();
@@ -36,4 +36,5 @@
 
   $('pre').addClass('prettyprint');
   $('blockquote').addClass('blockquote');
+  $('[data-toggle="tooltip"]').tooltip({placement: 'top', container: 'body'});
 })(jQuery, disqus_shortname, document, window, undefined);

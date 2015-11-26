@@ -1,20 +1,18 @@
-{{#post}}
 <nav role="pagination">
-  <ul class="nav navbar-nav pager">
-    {{#prev_post}}
+  <ul class="nav pager">
+    {{#next_post}}
     <li class="nav-item pager-prev prev">
-      <a class="newer-posts nav-link" href="{{url}}">
+      <a data-toggle="tooltip" title="{{title}}" class="newer-posts nav-link" href="{{url}}">
         <i class="fa fa-fw fa-arrow-left"></i>
       </a>
     </li>
-    {{/prev_post}}
-    {{#next_post}}
+    {{/next_post}}
+    {{#prev_post}}
     <li class="next pager-next nav-item">
-      <a class="older-posts nav-link" href="{{url}}">
+      <a data-toggle="tooltip" title="{{title}}" class="older-posts nav-link" href="{{url}}">
         <i class="fa fa-fw fa-arrow-right"></i>
       </a>
     </li>
-    {{/next_post}}
+    {{/prev_post}}
   </ul>
 </nav>
-{{/post}}
