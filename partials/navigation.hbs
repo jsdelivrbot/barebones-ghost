@@ -2,8 +2,9 @@
   <ul class="nav navbar-nav">
     {{#foreach navigation}}
     <li class="nav-item{{#if current}} active{{/if}}">
-      <a class="nav-link" href="{{url}}" title="{{label}}">
-        {{label}}
+      <a class="nav-link" href="{{url}}" data-placement="bottom" data-toggle="tooltip" title="{{label}}">
+        <span class="hidden-xs-up">{{label}}</span>
+        <i class="fa fa-fw fa-{{label}}"></i>
       </a>
     </li>
     {{/foreach}}

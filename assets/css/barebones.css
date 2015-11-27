@@ -16,8 +16,10 @@ body {
   font-family: "Source Sans Pro";
   font-size: 1rem;
   text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-font-smoothing: antialiased;
+  -webkit-font-smoothing:antialiased;
+  -moz-font-smoothing:antialiased;
+  -ms-font-smoothing:antialiased;
+  -o-font-smoothing:antialiased;
   font-smoothing: antialiased;
   text-shadow: 0px 0px 1px rgba(255,255,255.05);
 
@@ -35,16 +37,6 @@ main:after {
   display: block;
 }
 
-body > header {
-  float:left;
-  background-color:#fff;
-  border-bottom: 1px solid #f9f9f9;
-}
-
-body > footer {
-  max-height: 2rem;
-  padding-bottom:0;
-}
 
 @media(min-width: 10em) {
   html { font-size: 106.7%; }
@@ -108,7 +100,27 @@ main.container > .row {
   padding: .5em 1em;
 }
 
-.navbar-brand {
+.navbar,
+.navbar.navbar-light {
+  background-color:#fff;
+}
+
+.navbar:first-child {
+  float:left;
+  border-bottom: 1px solid #f9f9f9;
+   padding-left: 0; 
+  padding-right: 0; 
+}
+
+.navbar:last-child {
+  max-height: 2rem;
+  padding-bottom:0;
+}
+.navbar:last-child > * {
+  font-size:.85em;
+}
+
+.navbar .navbar-brand {
   padding-top: .25em;
   padding-bottom: .25em;
   font-size: 1.25em;
@@ -130,15 +142,15 @@ main.container > .row {
 .display-3 { font-size: 1.999em; }
 .display-4 { font-size: 2.499em; }
 
-.copy p,
-.copy ul {
-  margin-bottom: 1em;
-}
-
 .copy {
   line-height: 1.4;
   font-family: "Source Serif Pro";
   text-align: justify;
+}
+
+.copy p,
+.copy ul {
+  margin-bottom: 1em;
 }
 
 .copy img {
@@ -174,22 +186,9 @@ h4,
   font-weight: 600;
 }
 
-header.navbar { 
-  padding-left: 0; 
-  padding-right: 0; 
-}
-
-.headline {
-  margin-bottom: .1em;
-}
-
 .media-object {
   width:2.8em;
   height: auto;
-}
-
-footer.navbar > * {
-  font-size:.85em;
 }
 
 address, .author {
@@ -200,8 +199,14 @@ address, .author {
   margin-top: 0;
   margin-bottom: 0;
 }
-.pager > li.nav-item > a.nav-link {
+
+.pager .nav-item .nav-link {
   padding: 0 9px;
+  border-radius: 4px;
+}
+
+#disqus_thread {
+  opacity: 0;
 }
 
 #at4-share > a.at4-share-btn {

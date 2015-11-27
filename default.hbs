@@ -25,6 +25,7 @@
   <body class="{{body_class}}">
     <header role="banner" class="navbar navbar-full navbar-light navbar-fixed-top">
       <div class="container">
+        <a class="navbar-brand">{{@blog.title}}</a>
         {{navigation}}
       </div>
     </header>
@@ -37,6 +38,8 @@
       <div class="container">
         {{#is "home,tag,author,index"}}
           {{pagination}}
+        {{else}}
+          {{#is "post"}}{{>adjacent}}{{/is}}
         {{/is}}
       </div>
     </footer>
