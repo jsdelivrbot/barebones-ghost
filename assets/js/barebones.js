@@ -30,13 +30,13 @@
   };
 
   $(w).one('scroll', function(event) {
-    $('body').has(DISQUS_ID).append(loadDisqus());
+    $('body').has(DISQUS_ID)
+      .append(loadDisqus())
+      .find(DISQUS_ID)
+      .delay(800)
+      .fadeTo(null, 1);
   });
   
-  $(w).one('scroll', function(event) {
-    $(DISQUS_ID).delay(800).fadeTo(null, 1);
-  });
-
   $(w).scroll({st: 0}, function(event) {
     var sn = $(w).scrollTop();
     var x = (sn < this.st) ? $nav.slideDown() : $nav.slideUp();
