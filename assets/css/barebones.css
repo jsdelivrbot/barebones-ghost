@@ -216,17 +216,17 @@ div.tooltip {
 .copy p + ul {
    margin-top: -.5em;
 }
-.navbar-nav li > a { 
+.navbar-nav > a { 
    text-transform: capitalize; 
 }
-#at4-share > a.at4-share-btn {
-  background-color: rgba(0,0,0,.3);
+#at4-share > a.at-share-btn > span.at-icon-wrapper {
+  background-color: rgba(0,0,0,.3) !important;
 }
 
-#at4-share > a.at4-share-btn:hover {
-  background-color: rgba(0,0,0,.6);
+#at4-share > a.at-share-btn:hover > span.at-icon-wrapper {
+  background-color: rgba(0,0,0,.6) !important;
 }
 
-#at4-share > a.at4-share-btn:visited {
-  background-color: rgba(0,0,0,.9);
+#at4-share > a.at-share-btn:visited > span.at-icon-wrapper {
+  background-color: rgba(0,0,0,.9) !important;
 }
